@@ -1,10 +1,196 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>My First Static Page</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sajjala Ashok Reddy — Physical Design Engineer</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #1f2937;
+      --muted: #4b5563;
+      --accent: #0ea5e9;
+      --border: #e5e7eb;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", sans-serif; line-height: 1.5; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: 960px; margin: 0 auto; padding: 24px; }
+    .header { display: grid; gap: 8px; margin-bottom: 20px; }
+    .name { font-size: 2rem; font-weight: 700; }
+    .contact { display: flex; flex-wrap: wrap; gap: 14px; color: var(--muted); }
+    .tag { display: inline-block; padding: 2px 10px; border: 1px solid var(--border); border-radius: 999px; font-size: 0.85rem; color: var(--muted); }
+    .section { margin: 24px 0; }
+    .section h2 { font-size: 1.15rem; letter-spacing: 0.02em; text-transform: uppercase; font-weight: 700; margin: 0 0 10px; border-bottom: 2px solid var(--border); padding-bottom: 6px; }
+    .lead { color: var(--muted); }
+    ul { margin: 8px 0 0; padding-left: 18px; }
+    li { margin: 6px 0; }
+    .grid { display: grid; gap: 12px; }
+    .cols-2 { grid-template-columns: 1fr 1fr; }
+    .role { border: 1px solid var(--border); border-radius: 10px; padding: 14px; }
+    .role h3 { margin: 0 0 6px; font-size: 1.02rem; }
+    .meta { font-size: 0.92rem; color: var(--muted); }
+    .pill { display: inline-block; margin-right: 8px; margin-top: 6px; padding: 2px 8px; background: #f8fafc; border: 1px solid var(--border); border-radius: 999px; font-size: 0.82rem; color: var(--muted); }
+    .table { width: 100%; border-collapse: collapse; }
+    .table td { border: 1px solid var(--border); padding: 6px 10px; }
+    .footer { margin-top: 28px; color: var(--muted); font-size: 0.92rem; }
+    @media (max-width: 720px) {
+      .cols-2 { grid-template-columns: 1fr; }
+      .name { font-size: 1.6rem; }
+    }
+  </style>
 </head>
 <body>
-  <h1>Hello, World!</h1>
-  <p>This is my static website hosted on GitHub Pages.</p>
+  <main class="container">
+    <header class="header">
+      <div class="name">Sajjala Ashok Reddy</div>
+      <div class="contact">
+        <span>Bengaluru, India</span>
+        <span>•</span>
+        <a href="tel:+918008144134">+91 8008144134</a>
+        <span>•</span>
+        <a href="mailto:reddyashok439@gmail.com">reddyashok439@gmail.com</a>
+      </div>
+      <div>
+        <span class="tag">Senior Physical Design Engineer</span>
+        <span class="tag">Semiconductor · PD · STA · Sign-off</span>
+      </div>
+    </header>
+
+    <section class="section">
+      <h2>Professional summary</h2>
+      <p class="lead">
+        Electronics Design Engineer with 7+ years in semiconductor design, specializing in Physical Design (4+ years).
+        Block-level PnR and sign-off across 3/4/5 nm (Samsung) and 6 nm (TSMC). Expertise in PnR, STA, IR/EM, Formality,
+        VCLP, DRV, and DRC/LVS fixing. Proven in floorplanning, placement, CTS, routing, timing closure, and flow debugging.
+        Implemented clock spine and automated methodology setups to improve efficiency and reduce manual effort.
+      </p>
+      <div>
+        <span class="pill">Fusion Compiler</span>
+        <span class="pill">Innovus</span>
+        <span class="pill">ICC2</span>
+        <span class="pill">PrimeTime</span>
+        <span class="pill">Calibre</span>
+        <span class="pill">TCL</span>
+        <span class="pill">Shell</span>
+        <span class="pill">Python</span>
+        <span class="pill">AWK</span>
+        <span class="pill">SED</span>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Professional experience summary</h2>
+      <ul>
+        <li>Hands-on PD using Fusion Compiler, Innovus, ICC2, PrimeTime, and Calibre.</li>
+        <li>Physical design flow from RTL to GDSII; strong in floorplanning, placement, CTS, and routing.</li>
+        <li>Debugging block-level and flow issues; implemented clock spine and automated methodology setup.</li>
+        <li>Fixing DRC/LVS, shorts, antenna, IR/EM; strong scripting in TCL, Python, AWK, and SED.</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>Work experience</h2>
+
+      <div class="role">
+        <h3>Senior Physical Design Engineer — LeadSoc Technologies (Samsung Client)</h3>
+        <div class="meta">Bengaluru • Oct 2022 – Present</div>
+        <p class="lead">Completed 3 tapeouts at Samsung across AON and power-gated multi-domain/multivoltage designs.</p>
+        <ul>
+          <li>Block-level PnR, ECO implementation, final verification; handled PhyV, IR/EM for tapeout quality.</li>
+          <li>Floorplan to sign-off at 4 nm (Polaris B0, 1.5 GHz): voltage area separation, level shifter placement, UPF-driven VCLP checks.</li>
+          <li>Formality to validate netlist vs golden ref; iterative QoR refinement for timing and congestion.</li>
+          <li>Timing ECOs with STA: resolved violations, optimized paths for robust closure.</li>
+        </ul>
+        <ul>
+          <li>3 nm block (SMSM, 1.5M inst, 3 GHz): manual clock root buffer placement to fix latency.</li>
+          <li>Custom placement for critical data/clock paths; manual high-layer routing to fix setup.</li>
+          <li>Physical verification, STA sign-off; skewing techniques to avoid IR/DRC critical areas.</li>
+          <li>Developed basic RM flow from floorplan to sign-off GDS.</li>
+        </ul>
+        <ul>
+          <li>5 nm block (SAINTL, 1.2M inst, 3.2 GHz): feedback to IP teams on pins/macros for convergence.</li>
+          <li>Power reliability verification and IR checks; recipe tuning across PnR stages.</li>
+          <li>ECO techniques: downsizing/deleting non-critical cells, spreading, manual routing, congestion relief moves.</li>
+          <li>Ensured timing, power, SI requirements; created constraints and closure reports; ran design reviews and troubleshooting.</li>
+        </ul>
+      </div>
+
+      <div class="role">
+        <h3>Physical Design Engineer — Tech-M Cerium Systems (Intel Client)</h3>
+        <div class="meta">Nov 2021 – Sep 2022</div>
+        <p class="lead">6 nm TSMC technology; successfully completed tapeout.</p>
+        <ul>
+          <li>Block-level PnR, floorplan to ECO; addressed PhyV, IR/EM for quality tapeout.</li>
+          <li>Two blocks (1.4M inst, 2.55 GHz): timing-critical rectilinear block—skewing, path grouping, cloning.</li>
+          <li>Resolved QOR and clock constraint issues; Formality fixes for black-box/unmapped points.</li>
+          <li>Iterations to mitigate timing violations from area/timing-driven characteristics; RTL collaboration for critical modules.</li>
+          <li>Feed-dominant, congestion-critical block: floorplan experiments; scripts to remove shorts and fix spacing/enclosure violations.</li>
+          <li>Preplaced flops; reduced DRC/shorts near ports; manual hold buffer additions with density checks.</li>
+          <li>Fixed DRC, shorts, antenna, EM to meet tapeout timelines.</li>
+        </ul>
+      </div>
+
+      <div class="role">
+        <h3>Technical Officer — ECIL</h3>
+        <div class="meta">Aug 2019 – Jul 2021</div>
+        <ul>
+          <li>Designed circuit schematics; tested PCB functionality/physical characteristics (SMD components, ICs, HV boards, signal processing).</li>
+          <li>Worked with SiPMs, scintillators, optical fibers to detect/measure alpha and beta radiation.</li>
+        </ul>
+      </div>
+
+      <div class="role">
+        <h3>Contract Engineer — BEL</h3>
+        <div class="meta">Aug 2018 – Jul 2019</div>
+        <ul>
+          <li>Quality testing from PCB to finished devices; troubleshooting defects; production line monitoring.</li>
+          <li>Checked sensor performance and accuracy in device operation.</li>
+        </ul>
+      </div>
+
+      <div class="role">
+        <h3>Trainee Engineer — DRDO</h3>
+        <div class="meta">Sep 2018 – Jul 2018</div>
+        <ul>
+          <li>Operated RADAR controls; tracked moving objects using Doppler radar; visualized tracked paths in MATLAB.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Education</h2>
+      <div class="grid cols-2">
+        <div>
+          <strong>Bachelor of Engineering, Electronics & Communication</strong><br />
+          MVSR Engineering College (Osmania University) • 2014–2017 • 71%
+        </div>
+        <div>
+          <strong>Diploma, Electronics & Communication</strong><br />
+          Teegala Krishna Reddy Engineering College • 2011–2014 • 86%
+        </div>
+      </div>
+      <div style="margin-top:10px;">
+        <strong>SSC</strong><br />
+        Nagarjuna High School • 2010–2011 • 85%
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Personal information</h2>
+      <table class="table">
+        <tr><td><strong>Date of Birth</strong></td><td>07/06/1995</td></tr>
+        <tr><td><strong>Gender</strong></td><td>Male</td></tr>
+        <tr><td><strong>Nationality</strong></td><td>Indian</td></tr>
+      </table>
+    </section>
+
+    <section class="footer">
+      <div>Place: Bengaluru</div>
+      <div>Date: 10/12/2025</div>
+      <div style="margin-top:6px;">Sajjala Ashok Reddy</div>
+    </section>
+  </main>
 </body>
 </html>
